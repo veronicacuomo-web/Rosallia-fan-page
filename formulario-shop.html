@@ -30,11 +30,13 @@
       <li><a href="login.html">Registrarse</a></li>
     </div>
   </nav>
- 
-<main class="container">
+
+  <main class="container">
 <h1>Gracias por tu compra!</h1>
-<section class="formulario-compra">
-    <form action="home.html" method="post">
+<div class="formulario-compra">
+
+    <form action="shop.html">
+
         <label for="nombre">Nombre Completo:</label>
         <input type="text" id="nombre" name="nombre" required>
 
@@ -45,24 +47,21 @@
         <input type="email" id="email" name="email" required>
 
         <label for="tarjeta">Número de Tarjeta de Crédito:</label>
-        <input type="text" id="tarjeta" name="tarjeta" required>
+        <input type="number" id="tarjeta" name="tarjeta" required maxlength="16"
+         min="0000000000000001" max="9999999999999999">
 
         <label for="fecha-expiracion">Fecha de Expiración:</label>
-        <input type="text" id="fecha-expiracion" name="fecha-expiracion" required>
+        <input type="number" id="fecha-expiracion" name="fecha-expiracion" required maxlength="4"
+         min="0120" max="1299" placeholder="MMYY">
 
         <label for="cvv">CVV:</label>
-        <input type="text" id="cvv" name="cvv" required>
+        <input type="number" id="cvv" name="cvv" required maxlength="3"
+        min="000" max="999">
 
-        <button type="submit">Finalizar Compra</button>
-    </form>
-
-
-
-
-
-
-
-
+        <button type="submit" href="shop.html">Finalizar Compra</button>
+     </form>
+   </div>
+ </main> 
 
   <footer>
      <p>© 2025 Rosalía | Todos los derechos reservados | Sony Music Entertainment</p>
