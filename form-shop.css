@@ -175,21 +175,20 @@ h1{
     border-radius: 8px;
     z-index: 20;
   }
-  /* estructura: input#menu-toggle + label.menu-icon + .nav-group */
+
   #menu-toggle:checked + .menu-icon + .nav-group {
     display: flex;
   }
 
-  /* ajustes de contenedor y formulario */
+  
   .container { padding: 12px; max-width: 95%; }
   h1 { font-size: 2rem; margin-top: 8px; }
   .formulario-compra { padding: 14px; border-radius: 8px; }
   .formulario-compra input,
   .formulario-compra button { font-size: 1rem; padding: 12px; }
 
-  /* luz más pequeña en móviles */
+ 
   .light-effect { width: 200px; height: 200px; filter: blur(40px); }
 
-  /* si usas body como flex para footer pegado abajo, mantiene el comportamiento */
-  /* (no obligatorio) */
+
 }
