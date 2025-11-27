@@ -12,3 +12,130 @@
   mix-blend-mode: screen;
    z-index: 999;
 }
+body{
+   background-image: url("fondo-de-pared-de-color-con-textura.jpg");    
+   background-size: cover;
+   font-family: "times-new-roman", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 24px;
+   min-height: 100vh;
+}
+header {
+      background: #ffdb92;
+      padding: 30px;
+      font-family: "times-new-roman", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      text-align: center;
+
+    }
+nav{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #383647;
+    color: #7cbdbd;
+    padding: 15px 25px;
+    position: sticky;
+    top: 0%;
+    z-index: 10;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+.nav-group{
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+.nav-group li a {
+  text-decoration: none;
+  color: #a2cedd;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.nav-group li a:hover {
+    color: #ffdb92;
+}
+.menu-icon {
+  display: none;
+  font-size: 1.8em;
+  color: #6fa9e8;
+  cursor: pointer;
+  margin-right: auto;
+}
+#menu-toggle {
+  display: none;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+
+/*footer*/
+footer {
+    background-color: #383647;
+    color: white;
+    text-align: center;
+    display: block;
+    padding: 15px 25px;
+    position: static;
+    bottom: 0;
+    width: 100%;
+    }
+
+footer a {
+    color: #ffdb92;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+    }
+
+footer a:hover {
+    color: #57b3e8;
+    }
+.iconos-redes{
+    margin-top: 10px;
+}
+
+/*responsive*/
+@media (max-width: 768px) {
+  /* mostrar icono de menú y ocultar enlaces hasta hacer toggle */
+  .menu-icon { display: block; }
+  .nav-group {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    background: rgba(0,0,0,0.85);
+    position: absolute;
+    top: 60px;
+    right: 16px;
+    padding: 12px;
+    border-radius: 8px;
+    z-index: 20;
+  }
+  /* estructura: input#menu-toggle + label.menu-icon + .nav-group */
+  #menu-toggle:checked + .menu-icon + .nav-group {
+    display: flex;
+  }
+
+  /* ajustes de contenedor y formulario */
+  .container { padding: 12px; max-width: 95%; }
+  h1 { font-size: 2rem; margin-top: 8px; }
+  .formulario-compra { padding: 14px; border-radius: 8px; }
+  .formulario-compra input,
+  .formulario-compra button { font-size: 1rem; padding: 12px; }
+
+  /* luz más pequeña en móviles */
+  .light-effect { width: 200px; height: 200px; filter: blur(40px); }
+
+  /* si usas body como flex para footer pegado abajo, mantiene el comportamiento */
+  /* (no obligatorio) */
+}

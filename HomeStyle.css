@@ -1,14 +1,3 @@
-
-body{
- background-image: url(fondo-de-hormigon-azul-con-textura.jpg);
- background-size: cover;
- font-family: "times-new-roman", sans-serif;
- font-weight: 400;
- font-style: normal;
- margin: 0;
- display: block;
- top: 70%;
-}
 /*luz*/
 .light-effect {
   position: absolute;
@@ -131,27 +120,35 @@ footer a:hover {
 /*adaptable*/
 
 @media (max-width: 768px) {
-  .menu {
-    display: none;/*oculto el menu en caso de ser un dispositvo pequeño*/
-    flex-direction: column; /*cambio de fila a columna */
-    background: rgba(0, 0, 0, 0.9);
+  /* mostrar icono de menú y ocultar enlaces hasta hacer toggle */
+  .menu-icon { display: block; }
+  .nav-group {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    background: rgba(0,0,0,0.85);
     position: absolute;
     top: 60px;
-    width: 200px;
-    padding: 20px;
-    border-left: 2px solid #ff0000;
+    right: 16px;
+    padding: 12px;
+    border-radius: 8px;
+    z-index: 20;
   }
-
-  #menu-toggle:checked + .menu-icon + .menu {
+  /* estructura: input#menu-toggle + label.menu-icon + .nav-group */
+  #menu-toggle:checked + .menu-icon + .nav-group {
     display: flex;
   }
 
-  .menu-icon {
-    display: block;
-  }
+  /* ajustes de contenedor y formulario */
+  .container { padding: 12px; max-width: 95%; }
+  h1 { font-size: 2rem; margin-top: 8px; }
+  .formulario-compra { padding: 14px; border-radius: 8px; }
+  .formulario-compra input,
+  .formulario-compra button { font-size: 1rem; padding: 12px; }
 
-  .hero h1 {
-    font-size: 2em;
-  }
-  
+  /* luz más pequeña en móviles */
+  .light-effect { width: 200px; height: 200px; filter: blur(40px); }
+
+  /* si usas body como flex para footer pegado abajo, mantiene el comportamiento */
+  /* (no obligatorio) */
 }

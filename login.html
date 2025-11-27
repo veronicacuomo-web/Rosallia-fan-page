@@ -18,18 +18,18 @@
 
   <div class="light-effect"></div>
     <script>document.addEventListener("mousemove", (e)=>{const light= document.querySelector(".light-effect"); 
-    light.style.left= e.clientX + "px"; light.style.top= e.clientY + "px";});</script>
+    light.style.left= e.clientX + "px"; light.style.top= (e.clientY + window.scrollY) + "px";});</script>
 
  <nav id="nav">
     <input type="checkbox" id="menu-toggle">
     <label for="menu-toggle" class="menu-icon">&#9776</label>
-    <div class="nav-group">
+     <ul class="nav-group">
       <li><a href="home.html">Inicio</a></li>
       <li><a href="about.html">Rosa</a></li>
       <li><a href="music.html">Música</a></li>
       <li><a href="shop.html">Shop</a></li>
       <li><a href="login.html">Registrarse</a></li>
-    </div>
+     </ul>
   </nav>
 
     <div class="bienvenido">
