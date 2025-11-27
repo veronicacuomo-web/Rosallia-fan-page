@@ -165,7 +165,7 @@ footer {
     color: white;
     text-align: center;
     display: block;
-    padding: 15px 25px;
+    padding: 15px 1px;
     position: static;
     bottom: 0;
     width: 100%;
@@ -216,6 +216,7 @@ footer a:hover {
 
   .light-effect { width: 200px; height: 200px; filter: blur(40px); }
 
+
 span {
     display: inline-block;
     font-size: 50px;       
@@ -229,9 +230,25 @@ span {
     letter-spacing: 1.5em;
     margin-left: 5%;
   }
-.spotify { height: auto; 
-margin-top: 5%;
-margin-bottom: 3%;
-}
+
+    h3 {
+    margin-top: 15%;            
+    font-size: 28px;       
+    line-height: 1.1;
+    text-decoration-thickness: 3px;
+  }
+.spotify {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 10px;             
+    padding: 12px 0;
+  }
+
+  iframe {
+    width: 100%;           
+    max-width: 720px;
+    margin-top: 0;        
+  }
 }
 
