@@ -68,12 +68,14 @@ nav{
 }
 
 h1{
-    font-size: 50px;
+    font-size: 80px;
     color: #0b4e56;
     margin: 0;
     font-weight: bold;
-    font-family: "times-new-roman", sans-serif;
     text-align: center;
+     font-family: "Quintessential", serif;
+  font-weight: 400;
+  font-style: normal;
 
 }
 img{
