@@ -9,7 +9,10 @@
 
 <body>
 
-  <!-- NAV -->
+       <div class="light-effect"></div>
+    <script>document.addEventListener("mousemove", (e)=>{const light= document.querySelector(".light-effect"); 
+    light.style.left= e.clientX + "px"; light.style.top= (e.clientY + window.scrollY) + "px";});</script>
+
   <nav id="nav">
     <input type="checkbox" id="menu-toggle">
     <label for="menu-toggle" class="menu-icon">&#9776</label>
@@ -22,66 +25,58 @@
     </div>
   </nav>
 
-  <!-- ---------------------------- -->
-  <!-- DISCROGRAFÍA PRINCIPAL (FLIP + FULLSCREEN) -->
-  <!-- ---------------------------- -->
-
   <section id="discografia">
-      <h2>Discografía</h2>
+      <h1>Discografía</h1>
 
       <div class="grid">
 
-          <!-- LOS ÁNGELES -->
           <a href="#losangeles" class="flip-card" id="card1">
               <div class="flip-inner">
                   <div class="flip-front card">
-                      <img src="https://via.placeholder.com/350x350" alt="Los Ángeles">
+                      <img src="los angeles.jpg" alt="Los Ángeles">
                       <h3>Los Ángeles</h3>
                   </div>
                   <div class="flip-back">
-                      <h3>Los Ángeles</h3>
+                      <h3>Los Ángeles - 2017</h3>
                       <p>Haz clic para ver más información.</p>
                   </div>
               </div>
           </a>
 
-          <!-- EL MAL QUERER -->
           <a href="#elmalquerer" class="flip-card" id="card2">
               <div class="flip-inner">
                   <div class="flip-front card">
-                      <img src="https://via.placeholder.com/350x350" alt="El Mal Querer">
+                      <img src="mal querer.jpg" alt="El Mal Querer">
                       <h3>El Mal Querer</h3>
                   </div>
                   <div class="flip-back">
-                      <h3>El Mal Querer</h3>
+                      <h3>El Mal Querer - 2018</h3>
                       <p>Haz clic para ver más información.</p>
                   </div>
               </div>
           </a>
 
-          <!-- MOTOMAMI -->
           <a href="#motomami" class="flip-card" id="card3">
               <div class="flip-inner">
                   <div class="flip-front card">
-                      <img src="https://via.placeholder.com/350x350" alt="Motomami">
+                      <img src="motomami.jpg" alt="Motomami">
                       <h3>MOTOMAMI</h3>
                   </div>
                   <div class="flip-back">
-                      <h3>MOTOMAMI</h3>
+                      <h3>MOTOMAMI - 2022</h3>
                       <p>Haz clic para ver más información.</p>
                   </div>
               </div>
           </a>
 
-          <!-- LUX ÆTERNA -->
           <a href="#lux" class="flip-card" id="card4">
               <div class="flip-inner">
                   <div class="flip-front card">
-                      <img src="https://via.placeholder.com/350x350" alt="Lux">
-                      <h3>LUX ÆTERNA</h3>
+                      <img src="lux.avif" alt="Lux">
+                      <h3>LUX</h3>
                   </div>
                   <div class="flip-back">
-                      <h3>LUX ÆTERNA</h3>
+                      <h3>LUX - 2025</h3>
                       <p>Haz clic para ver más información.</p>
                   </div>
               </div>
@@ -90,135 +85,228 @@
       </div>
   </section>
 
-  <!-- ---------------------------- -->
-  <!-- FULLSCREEN INFO (TARGET) -->
-  <!-- ---------------------------- -->
-
   <div id="losangeles" class="fullscreen">
       <a href="#" class="close-full" aria-label="Cerrar">✕</a>
       <div class="fullscreen-content">
-          <img src="https://via.placeholder.com/600x600" alt="Los Ángeles portada">
-          <h2>Los Ángeles (2017)</h2>
-          <p>Primer álbum en colaboración con Raül Refree.</p>
+          <img src="los angeles.jpg" alt="Los Ángeles portada">
+          <p> Es el álbum debut de Rosalía, creado junto al productor Raül Refree. Es un disco marcado por un enfoque minimalista: voz y guitarra casi desnudas. 
+            Reinterpreta el flamenco desde una mirada contemporánea y oscura, con temas sobre la muerte, el amor y la tradición.
+            <br><br>
+            Si Tú Supieras Compañero - De Plata - Nos Quedamos Solitos - Catalina - Día 14 De Abril - Que Se Muere Que Se Muere - 
+            Por Mi Puerta No Lo Pasen - Te Venero - Por Castigarme Tan Fuerte - La Hija De Juan Simón - El Redentor - I See A Darkness</p>
       </div>
   </div>
 
   <div id="elmalquerer" class="fullscreen">
       <a href="#" class="close-full" aria-label="Cerrar">✕</a>
       <div class="fullscreen-content">
-          <img src="https://via.placeholder.com/600x600" alt="El Mal Querer portada">
-          <h2>El Mal Querer (2018)</h2>
-          <p>Álbum conceptual basado en el romance medieval "Flamenca".</p>
+          <img src="mal querer.jpg" alt="El Mal Querer portada">
+          <p> Es un álbum conceptual inspirado en la novela occitana “Flamenca”. Cuenta la historia de una relación tóxica a través de capítulos/canciones, 
+            explorando temas como el amor, los celos, el control y la liberación. Combina flamenco con pop, electrónica y música urbana, creando un sonido 
+            innovador que llevó a Rosalía a la fama internacional.
+            <br><br>
+            MALAMENTE (Cap.1: Augurio) - QUE NO SALGA LA LUNA (Cap.2: Boda) - PIENSO EN TU MIRÁ (Cap.3: Celos) - DE AQUÍ NO SALES (Cap.4: Disputa) - RENIEGO (Cap.5: Lamento) - PRESO (Cap.6: Clausura) 
+          - BAGDAD (Cap.7: Liturgia) - DI MI NOMBRE (Cap.8: Éxtasis) - NANA (Cap.9: Concepción) - MALDICIÓN (Cap.10: Cordura) - A NINGÚN HOMBRE (Cap.11: Poder)</p>
       </div>
   </div>
 
   <div id="motomami" class="fullscreen">
       <a href="#" class="close-full" aria-label="Cerrar">✕</a>
       <div class="fullscreen-content">
-          <img src="https://via.placeholder.com/600x600" alt="Motomami portada">
-          <h2>MOTOMAMI (2022)</h2>
-          <p>Álbum experimental aclamado globalmente.</p>
+          <img src="motomami.jpg" alt="Motomami portada">
+          <p> Es un álbum experimental y muy personal donde Rosalía mezcla géneros como pop, reguetón, electrónica, flamenco y jazz. 
+            El disco explora temas de identidad, libertad, fama, sexualidad y vulnerabilidad. Con una producción arriesgada y diversa, 
+            MOTOMAMI muestra la faceta más creativa y atrevida de Rosalía, consolidándola como una artista innovadora a nivel global.
+            <br><br>
+            SAOKO - CANDY - LA FAMA ft.The Weeknd - BULERÍAS - CHICKEN TERIYAKI - HENTAI - BIZCOCHITO - G3 N15 - MOTOMAMI - DIABLO - DELIRIO DE GRANDEZA - 
+            CUUUUuuuuuute - COMO UN G - Abcdefg - LA COMBI VERSACE ft.Tokischa - SAKURA
+          </p>
       </div>
   </div>
 
   <div id="lux" class="fullscreen">
       <a href="#" class="close-full" aria-label="Cerrar">✕</a>
       <div class="fullscreen-content">
-          <img src="https://via.placeholder.com/600x600" alt="Lux portada">
-          <h2>LUX ÆTERNA (2024)</h2>
-          <p>Exploración sonora más minimalista y espiritual.</p>
+          <img src="lux.avif" alt="Lux portada">
+          <p> Es un álbum profundamente espiritual y experimental donde Rosalía mezcla orquestación, electrónica, flamenco y elementos místicos. 
+            El disco explora temas como la fe, la identidad, la culpa, la redención y la búsqueda interior, usando un tono simbólico y religioso. 
+            Con una producción intensa y teatral, LUX muestra a Rosalía en su faceta más introspectiva y arriesgada, alejándose del sonido comercial 
+            para construir una obra más conceptual, emotiva y luminosa.
+            <br><br>
+           Sexo, Violencia y Llantas - Reliquia - Divinize - Porcelana ft.Dougie F - Mio Cristo Piange Diamanti - Berghain ft.Björk & Yves Tumor - 
+           La Perla ft. Yahritza Y Su Esencia - Mundo Nuevo - De Madrugá - Dios Es Un Stalker - La Yugular - Sauvignon Blanc - 
+           La Rumba Del Perdón ft.Estrella Morente & Sílvia Pérez Cruz - Memória ft.Carminho - Magnolias </p>
       </div>
   </div>
 
-  <!-- ---------------------------- -->
-  <!-- OTROS ALBUMES -->
-  <!-- ---------------------------- -->
-
   <section id="albumes">
-      <h2>Álbumes</h2>
+      <h2>Otros proyectos</h2>
       <div class="grid">
           <div class="card">
-              <img src="https://via.placeholder.com/350x350" alt="Álbum demo">
-              <h3>Álbum Demo</h3>
+            <a href="https://open.spotify.com/intl-es/album/3zbiiu3JTibw0esC7eoMXr?si=xT5vR3BWRwyL4jS5pJc_hA" target="_blank">
+              <img src="motomami+.webp" alt="MOTOMAMI+">
+              </a>
+              <h3>MOTOMAMI+ (2022)</h3>
+              <a href=""></a>
           </div>
 
           <div class="card">
-              <img src="https://via.placeholder.com/350x350" alt="Otro proyecto">
-              <h3>Otro Proyecto</h3>
+            <a href="https://open.spotify.com/intl-es/album/50uChhk7AKkzDKytDixjYW?si=Gce2KpU6RI2rr-HL7NmeqQ" target="_blank">
+              <img src="rr.jpg" alt="RR">
+              </a>
+              <h3>RR (con Rauw Alejandro)  (2023)</h3>
           </div>
       </div>
   </section>
-
-  <!-- ---------------------------- -->
-  <!-- EP2 -->
-  <!-- ---------------------------- -->
-
-  <section id="ep2">
-      <h2>EP2</h2>
-      <div class="grid">
-          <div class="card">
-              <img src="https://via.placeholder.com/350x350" alt="EP demo">
-              <h3>EP Demo</h3>
-          </div>
-      </div>
-  </section>
-
-  <!-- ---------------------------- -->
-  <!-- SENCILLOS -->
-  <!-- ---------------------------- -->
 
   <section id="sencillos">
       <h2>Sencillos</h2>
       <div class="grid">
           <div class="card">
-              <img src="https://via.placeholder.com/350x350" alt="Single uno">
-              <h3>Single Uno</h3>
+            <a href="https://youtu.be/6s-MQzPZ6IE?si=obfxMX5h40PwtqCn" target="_blank">
+              <img src="aunque noche.jpg" alt="aunque es de noche">
+              </a>
+              <h3>Aunque es de Noche - 2017</h3>
           </div>
 
           <div class="card">
-              <img src="https://via.placeholder.com/350x350" alt="Single dos">
-              <h3>Single Dos</h3>
+            <a href="https://youtu.be/p7bfOZek9t4?si=WJhAUvuPER6-43O3" target="_blank">
+              <img src="con altura.jpg" alt="card altura">
+              </a>
+              <h3>Con Altura (ft. J.Balvin) - 2019</h3>
           </div>
 
           <div class="card">
-              <img src="https://via.placeholder.com/350x350" alt="Single uno">
-              <h3>Single Uno</h3>
+            <a href="https://youtu.be/CLFUhty8EF4?si=aUpRkDx9497Ogat3" target="_blank">
+              <img src="cuture.png" alt="aute cuture">
+              </a>
+              <h3>Aute Cuture - 2019</h3>
           </div>
 
           <div class="card">
-              <img src="https://via.placeholder.com/350x350" alt="Single dos">
-              <h3>Single Dos</h3>
+            <a href="https://youtu.be/eQCpjOBJ5UQ?si=T9khEJed6dMYBb6s" target="_blank">
+              <img src="money.jpg" alt="fucking money">
+              </a>
+              <h3>Fucking Money Man - 2019</h3>
           </div>
 
           <div class="card">
-              <img src="https://via.placeholder.com/350x350" alt="Single uno">
-              <h3>Single Uno</h3>
+            <a href="https://youtu.be/2j3x0VYnehg?si=qe640wzzyHMmvAAh" target="_blank">
+              <img src="yo x ti.jpg" alt="Yo x Ti, Tu x Mi">
+              </a>
+              <h3>Yo x Ti, Tu x Mi (ft.Ozuna) - 2019</h3>
           </div>
 
           <div class="card">
-              <img src="https://via.placeholder.com/350x350" alt="Single dos">
-              <h3>Single Dos</h3>
+            <a href="https://youtu.be/5zwpwbdGNIk?si=ji3v0cY_9K2b5erl" target="_blank">
+              <img src="palé.jpg" alt="a palé">
+              </a>
+              <h3>A Palé - 2019</h3>
           </div>
 
           <div class="card">
-              <img src="https://via.placeholder.com/350x350" alt="Single uno">
-              <h3>Single Uno</h3>
+            <a href="https://youtu.be/mtym36PG6R8?si=Iau9e6h45X9TGGhD" target="_blank">
+              <img src="juro que.jpg" alt="juro que">
+              </a>
+              <h3>Juro Que - 2020</h3>
           </div>
 
           <div class="card">
-              <img src="https://via.placeholder.com/350x350" alt="Single dos">
-              <h3>Single Dos</h3>
+            <a href="https://youtu.be/VuUa9ZQL28w?si=OTbDo9OjPc9tLaMb" target="_blank">
+              <img src="dolerme.jpg" alt="dolerme">
+              </a>
+              <h3>Dolerme - 2020</h3>
           </div>
 
           <div class="card">
-              <img src="https://via.placeholder.com/350x350" alt="Single dos">
-              <h3>Single Dos</h3>
+            <a href="https://youtu.be/q5xIoeG4uVI?si=aTGqwdOacGVRLpf0" target="_blank">
+              <img src="tkn-portada.jpg" alt="tkn">
+              </a>
+              <h3>TKN (ft.Travis Scott) - 2020</h3>
           </div>
+
+          <div class="card">
+            <a href="https://youtu.be/Soly0ne467M?si=wFHJE4iX5d_RhkOF" target="_blank">
+              <img src="blinding l rmx.jpg" alt="blinding lights remix">
+              </a>
+              <h3>Blinding Lights (Remix) ft.The Weeknd - 2020</h3>
+          </div>
+
+          <div class="card">
+            <a href="https://youtu.be/8TsWkuWWXgc?si=RVMDRy1JvwVAQNeT" target="_blank">
+              <img src="lo-vas-a-olvidar.jpg" alt="lo vas a ollvidar">
+              </a>
+              <h3>Lo Vas A Olvidar (ft.Billie Eilish) - 2021</h3>
+          </div>
+
+          <div class="card">
+            <a href="https://youtu.be/CmmTz3W-JO0?si=RpilLhTX76F2ygvl" target="_blank">
+              <img src="linda.jpg" alt="linda">
+              </a>
+              <h3>Linda (ft.Tokischa) - 2021</h3>
+          </div>
+
+          <div class="card">
+            <a href="https://youtu.be/5g2hT4GmAGU?si=hYVXiqWAMpzZJjLf" target="_blank">
+              <img src="despechá.jpg" alt="despechá">
+              </a>
+              <h3>Despechá - 2022</h3>
+          </div>
+
+          <div class="card">
+            <a href="https://youtu.be/sWGJd26kUOY?si=5niUQ0tIBWNWNJOW" target="_blank">
+              <img src="pañuelo.jpg" alt="el pañuelo">
+              </a>
+              <h3>El Pañuelo (ft.Romeo Santos) - 2022</h3>
+          </div>
+
+          <div class="card">
+            <a href="https://youtu.be/O5LB6auKMDo?si=4Cu9gmaIKEo8ObKx" target="_blank">
+              <img src="despecha rmx.jpg" alt="despechá remix">
+              </a>
+              <h3>Despechá RMX (ft.Cardi B) - 2022</h3>
+          </div>
+
+          <div class="card">
+            <a href="https://youtu.be/rPG4XX_X9rs?si=9oyk3g_Z4Cb1b8gb" target="_blank">
+              <img src="llylm.jpg" alt="llylm">
+              </a>
+              <h3>LLYYLM - 2023</h3>
+          </div>
+
+          <div class="card">
+            <a href="https://youtu.be/F84pjEryeC0?si=4m_rbEbiSR5Rd8Cy" target="_blank">
+              <img src="tuya.jpg" alt="tuya">
+              </a>
+              <h3>TUYA - 2023</h3>
+          </div>
+
+          <div class="card">
+            <a href="https://youtu.be/8jsi2Tgvx6A?si=oppcwvErUvkNEi5Q" target="_blank">
+              <img src="oral.jpg" alt="oral">
+              </a>
+              <h3>Oral (ft.Björk) - 2023</h3>
+          </div>
+
+          <div class="card">
+            <a href="https://youtu.be/UxXY_hR_wzo?si=iG5ZcdSqcxZ2eMlX" target="_blank">
+              <img src="woman.jpg" alt="new woman">
+              </a>
+              <h3>New Woman (ft.LISA) - 2024</h3>
+          </div>
+
+          <div class="card">
+            <a href="https://youtu.be/XyTk7qJN23A?si=siB83D-p-V-Smv1d" target="_blank">
+              <img src="omega.jpg" alt="omega">
+              </a>
+              <h3>Omega (ft.Ralphie Choo) - 2024</h3>
+          </div>
+
       </div>
       
   </section>
 
-  <!-- FOOTER -->
+
   <footer>
       <p>© 2025 Rosalía | Todos los derechos reservados | Sony Music Entertainment</p>
       <a href="mailto:contacto@rosalia.blog.com.ar">contacto@rosalia.blog.com.ar</a>

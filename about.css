@@ -146,12 +146,25 @@ img{
 
 .lightbox-overlay img { -webkit-user-drag: none; user-select: none; }
 
+.close-full {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  font-size: 38px;
+  text-decoration: none;
+  color: #ffdb92;
+}
+
 h2{
   text-align: center;
     font-family: "Quintessential", serif;
   font-weight: 700;
   font-size: 35px;
   font-style: normal;
+}
+p.footerID {
+  background-color: transparent;
+  color: white;
 }
 
 p,

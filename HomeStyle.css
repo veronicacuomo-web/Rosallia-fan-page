@@ -31,6 +31,10 @@ p {
   max-width: 90%;
 }
 
+p.footerID {
+  background-color: transparent;
+}
+
 h4 {
   text-align: center;
   font-size: 40px;
@@ -149,7 +153,6 @@ iframe {
 /*footer*/
 footer {
   background-color: #383647;
-  color: white;
   text-align: center;
   padding: 15px 1px;
   width: 100%;
