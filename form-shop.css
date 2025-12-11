@@ -85,25 +85,20 @@ footer {
     background-color: #383647;
     color: white;
     text-align: center;
-    display: block;
-    padding: 15px 1px;
-    position: absolute;
-    bottom: 0;
+    padding: 15px;
     width: 100%;
-    }
+    margin-top: auto;
+}
 
 footer a {
     color: #ffdb92;
     text-decoration: none;
     margin: 0 10px;
     transition: color 0.3s;
-    }
+}
 
 footer a:hover {
     color: #57b3e8;
-    }
-.iconos-redes{
-    margin-top: 10px;
 }
 
 .container{
@@ -158,31 +153,105 @@ h1{
 
 /*adaptable*/
 
+@media (max-width: 1024px) {
+  h1 { font-size: 2.4rem; }
+  
+  .container {
+    max-width: 750px;
+    padding: 18px;
+  }
+}
+
 @media (max-width: 768px) {
+  nav {
+    padding: 12px 15px;
+  }
+
   .menu-icon { display: block; }
+  
   .nav-group {
     display: none;
     flex-direction: column;
     gap: 12px;
-    background: rgba(0,0,0,0.85);
+    background: rgba(0,0,0,0.9);
     position: absolute;
-    top: 60px;
-    left: 16px;
+    top: 55px;
+    left: 12px;
+    right: 12px;
     padding: 12px;
     border-radius: 8px;
     z-index: 20;
+    width: auto;
+  }
+
+  .nav-group li {
+    padding: 8px 0;
   }
 
   #menu-toggle:checked + .menu-icon + .nav-group {
     display: flex;
   }
 
-  .container { padding: 12px; max-width: 95%; }
+  .container { 
+    padding: 15px; 
+    max-width: 95%; 
+    margin-bottom: 20px;
+  }
+  
   h1 { font-size: 2rem; margin-top: 8px; }
-  .formulario-compra { padding: 14px; border-radius: 8px; }
+  
+  .formulario-compra { padding: 15px; border-radius: 8px; }
+  
+  .formulario-compra form {
+    gap: 10px;
+  }
+  
   .formulario-compra input,
-  .formulario-compra button { font-size: 1rem; padding: 12px; }
+  .formulario-compra button { 
+    font-size: 0.95rem; 
+    padding: 10px; 
+  }
 
- 
   .light-effect { width: 200px; height: 200px; filter: blur(40px); }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 10px 12px;
+  }
+
+  .menu-icon {
+    font-size: 1.5em;
+  }
+
+  h1 { 
+    font-size: 1.6rem; 
+    margin: 10px 0;
+  }
+  
+  .container { 
+    padding: 10px; 
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .formulario-compra { 
+    padding: 12px; 
+  }
+  
+  .formulario-compra form {
+    gap: 8px;
+  }
+  
+  .formulario-compra label {
+    font-size: 0.9rem;
+  }
+  
+  .formulario-compra input,
+  .formulario-compra button { 
+    font-size: 0.9rem; 
+    padding: 9px; 
+  }
+
+  .light-effect { width: 150px; height: 150px; filter: blur(35px); }
 }

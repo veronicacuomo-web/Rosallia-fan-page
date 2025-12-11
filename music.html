@@ -316,5 +316,55 @@
       </div>
   </footer>
 
+  <script>
+    // Manejar flip cards en dispositivos táctiles
+    const flipCards = document.querySelectorAll('.flip-card');
+    
+    flipCards.forEach(card => {
+      // Para dispositivos táctiles
+      card.addEventListener('touchstart', function(e) {
+        this.classList.add('touch-active');
+      });
+      
+      // Opcional: remover clase al hacer tap en otro lugar
+      document.addEventListener('touchstart', function(e) {
+        if (!e.target.closest('.flip-card')) {
+          flipCards.forEach(c => c.classList.remove('touch-active'));
+        }
+      });
+    });
+
+    // Manejar botones de cerrar fullscreen
+    const closeButtons = document.querySelectorAll('.close-full');
+    
+    closeButtons.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const fullscreen = this.closest('.fullscreen');
+        if (fullscreen) {
+          window.location.hash = '';
+        }
+      });
+    });
+
+    // Cerrar fullscreen al presionar ESC
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        window.location.hash = '';
+      }
+    });
+
+    // Cerrar fullscreen al hacer clic fuera del contenido
+    const fullscreens = document.querySelectorAll('.fullscreen');
+    
+    fullscreens.forEach(fs => {
+      fs.addEventListener('click', function(e) {
+        if (e.target === this) {
+          window.location.hash = '';
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>

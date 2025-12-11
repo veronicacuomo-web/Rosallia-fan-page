@@ -36,11 +36,12 @@ nav{
   align-items: center;
   background-color: #383647;
   color: #7cbdbd;
-  padding: 15px 25px;
+  padding: 15px 20px;
   width: 100%;
   position: sticky;
   top: 0;
   z-index: 10;
+  flex-wrap: wrap;
 }
 
 .nav-group{
@@ -157,29 +158,46 @@ footer a:hover{
 }
 
 /*adaptable*/
+@media (max-width: 1024px){
+  h1{ font-size: 2.6rem; }
+  
+  .container{
+    max-width: 750px;
+  }
+}
+
 @media (max-width: 900px){
   h1{ font-size: 2.4rem; }
 }
 
 @media (max-width: 768px){
+  nav {
+    padding: 12px 15px;
+  }
 
   .menu-icon{
     display: block;
     margin-right: auto;
+    font-size: 1.5em;
   }
 
   .nav-group{
     display: none;
     flex-direction: column;
-    background: rgba(0,0,0,0.85);
+    background: rgba(0,0,0,0.9);
     position: absolute;
-    top: 65px;
-    left: 10px;
-    padding: 15px;
+    top: 55px;
+    left: 12px;
+    right: 12px;
+    padding: 12px;
     border-radius: 8px;
-    width: 200px;
-    gap: 15px;
+    width: auto;
+    gap: 12px;
     z-index: 20;
+  }
+
+  .nav-group li {
+    padding: 8px 0;
   }
 
   #menu-toggle:checked + .menu-icon + .nav-group{
@@ -188,30 +206,69 @@ footer a:hover{
 
   .container{
     max-width: 95%;
-    padding: 12px;
+    padding: 15px;
+    margin-bottom: 60px;
   }
 
   h1{
-    font-size: 1.9rem;
+    font-size: 2rem;
   }
 
   .contlogin{
-    padding: 14px;
+    padding: 15px;
+  }
+
+  .contlogin form {
+    gap: 10px;
   }
 
   .contlogin input,
   .contlogin button{
-    font-size: 1rem;
+    padding: 10px;
+    font-size: 0.95rem;
   }
 
   .light-effect{
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
     filter: blur(40px);
   }
 }
 
 @media (max-width: 480px){
+  nav {
+    padding: 10px 12px;
+  }
+
   h1{ font-size: 1.6rem; }
-  nav{ padding: 12px 18px; }
+  
+  .container{
+    max-width: 100%;
+    padding: 10px;
+    margin-bottom: 50px;
+  }
+
+  .contlogin{
+    padding: 12px;
+  }
+
+  .contlogin form {
+    gap: 8px;
+  }
+
+  .contlogin label {
+    font-size: 0.9rem;
+  }
+
+  .contlogin input,
+  .contlogin button{
+    padding: 9px;
+    font-size: 0.9rem;
+  }
+
+  .light-effect{
+    width: 150px;
+    height: 150px;
+    filter: blur(35px);
+  }
 }

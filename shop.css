@@ -225,36 +225,90 @@ footer a:hover {
 
 /*adaptable*/
 
+@media (max-width: 1024px) {
+  h1 { font-size: 80px; }
+  h2 { font-size: 30px; }
+
+  .shop {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    padding: 25px 15px;
+  }
+
+  .contenedor-hover {
+    width: 320px;
+    height: 320px;
+  }
+}
+
 @media (max-width: 768px) {
+  h1 { font-size: 60px; margin-top: 10px; }
+  h2 { font-size: 25px; }
+
+  nav {
+    padding: 12px 15px;
+  }
 
   .menu-icon { display: block; }
   .nav-group {
     display: none;
     flex-direction: column;
     gap: 12px;
-    background: rgba(0,0,0,0.85);
+    background: rgba(0,0,0,0.9);
     position: absolute;
-    top: 60px;
-    left: 16px;
+    top: 55px;
+    left: 12px;
+    right: 12px;
     padding: 12px;
     border-radius: 8px;
     z-index: 20;
+    width: auto;
+  }
+
+  .nav-group li {
+    padding: 8px 0;
   }
  
   #menu-toggle:checked + .menu-icon + .nav-group {
     display: flex;
   }
 
- 
-  .container { padding: 12px; max-width: 95%; }
-  h1 { font-size: 2rem; margin-top: 8px; }
-  .formulario-compra { padding: 14px; border-radius: 8px; }
-  .formulario-compra input,
-  .formulario-compra button { font-size: 1rem; padding: 12px; }
+  .shop {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 20px 12px;
+  }
 
-    .contenedor-hover {
+  .item img {
+    height: 200px;
+  }
+
+  .item-content {
+    padding: 12px;
+  }
+
+  .item h2 {
+    font-size: 1.1em;
+  }
+
+  .item p {
+    font-size: 0.85em;
+  }
+
+  .precio {
+    font-size: 1em;
+    margin: 10px 0;
+  }
+
+  a.button {
+    padding: 8px;
+    font-size: 0.85em;
+  }
+
+  .contenedor-hover {
     position: relative;
-    width: 280px;
+    width: 100%;
+    max-width: 280px;
     height: 280px;
     overflow: hidden;
     margin: 0 auto;
@@ -269,15 +323,86 @@ footer a:hover {
     transition: opacity 0.3s ease;
     object-fit: cover;
   }
- .img2{
-  opacity: 0;
-}
-.contenedor-hover:hover .img2{
-  opacity: 1;
-}
-.contenedor-hover:hover .img1{
-  opacity: 0;
-}
-  .light-effect { width: 200px; height: 200px; filter: blur(40px); }
 
+  .img2 {
+    opacity: 0;
+  }
+
+  .contenedor-hover:hover .img2 {
+    opacity: 1;
+  }
+
+  .contenedor-hover:hover .img1 {
+    opacity: 0;
+  }
+
+  .light-effect { width: 200px; height: 200px; filter: blur(40px); }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 40px; }
+  h2 { font-size: 20px; }
+  p { font-size: 14px; }
+
+  nav {
+    padding: 10px 12px;
+  }
+
+  .menu-icon {
+    font-size: 1.5em;
+  }
+
+  .shop {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 15px 10px;
+  }
+
+  .item img {
+    height: 180px;
+  }
+
+  .item-content {
+    padding: 10px;
+  }
+
+  .item h2 {
+    font-size: 1em;
+    margin: 0 0 8px 0;
+  }
+
+  .item p {
+    font-size: 0.8em;
+  }
+
+  .precio {
+    font-size: 0.95em;
+    margin: 8px 0;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  a.button {
+    padding: 10px;
+    font-size: 0.8em;
+  }
+
+  a.button:hover {
+    transform: scale(1.02);
+  }
+
+  .contenedor-hover {
+    width: 100%;
+    max-width: 100%;
+    height: 250px;
+  }
+
+  .light-effect {
+    width: 150px;
+    height: 150px;
+    filter: blur(35px);
+  }
 }

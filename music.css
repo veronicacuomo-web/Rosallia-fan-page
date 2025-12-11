@@ -51,7 +51,7 @@ nav {
   align-items: center;
   background-color: #383647;
   padding: 15px 25px;
-  
+  position: sticky;
   top: 0;
   z-index: 10;
 }
@@ -87,9 +87,11 @@ nav {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
-  padding: 30px 40px;
+  padding: 30px 20px;
   max-width: 1300px;
   margin: 0 auto;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .card {
@@ -137,6 +139,11 @@ nav {
 }
 
 .flip-card:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+
+.flip-card.touch-active .flip-inner {
   transform: rotateY(180deg);
 }
 
@@ -197,6 +204,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2000;
 }
 
 .fullscreen:target {
@@ -231,6 +239,27 @@ nav {
   font-size: 38px;
   text-decoration: none;
   color: #ffdb92;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  z-index: 2100;
+}
+
+.close-full:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+.close-full:active {
+  transform: scale(0.95);
 }
 
 /*footer*/
@@ -254,10 +283,24 @@ footer a:hover {
 
 /*adaptable*/
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 25px 15px;
+  }
 
+  h1 { font-size: 80px; }
+  h2 { font-size: 42px; }
+}
+
+@media (max-width: 768px) {
   h1 { font-size: 60px; }
   h2 { font-size: 35px; }
+  
+  nav {
+    padding: 12px 15px;
+  }
 
   .menu-icon { display: block; }
 
@@ -265,25 +308,109 @@ footer a:hover {
     display: none;
     flex-direction: column;
     gap: 12px;
-    background: rgba(0,0,0,0.85);
-    padding: 15px;
+    background: rgba(0,0,0,0.9);
+    padding: 12px;
     position: absolute;
-    top: 60px;
+    top: 55px;
     left: 12px;
+    right: 12px;
     border-radius: 10px;
+    z-index: 20;
+  }
+
+  .nav-group li {
+    padding: 8px 0;
   }
 
   #menu-toggle:checked + .menu-icon + .nav-group {
     display: flex;
   }
 
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 20px 10px;
+  }
+
+  .card img {
+    height: 200px;
+  }
+
+  .flip-inner {
+    height: 280px;
+  }
+
   .fullscreen-content img {
-    width: 80%;
+    width: 85%;
+  }
+
+  .close-full {
+    top: 15px;
+    right: 15px;
+    font-size: 32px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .close-full {
+    top: 15px;
+    right: 20px;
+    font-size: 32px;
   }
 
   .light-effect {
     width: 200px;
     height: 200px;
     filter: blur(40px);
+  }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 45px; }
+  h2 { font-size: 28px; }
+  
+  nav {
+    padding: 10px 12px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 15px 8px;
+  }
+
+  .card img {
+    height: 180px;
+  }
+
+  .flip-inner {
+    height: 250px;
+  }
+
+  .flip-front h3,
+  .flip-back h3 {
+    font-size: 1.1em;
+  }
+
+  .fullscreen-content {
+    padding: 20px;
+  }
+
+  .fullscreen-content img {
+    width: 95%;
+  }
+
+  .close-full {
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .light-effect {
+    width: 150px;
+    height: 150px;
+    filter: blur(35px);
   }
 }
