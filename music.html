@@ -1,30 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rosalia_Musica</title>
-
-    <link rel="stylesheet" href="https://use.typekit.net/vmn1kfh.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Quintessential&display=swap" rel="stylesheet">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Discografía Rosalía</title>
     <link rel="stylesheet" href="music.css">
-    
 </head>
 
 <body>
 
-<div class="light-effect"></div>
-    <script>document.addEventListener("mousemove", (e)=>{const light= document.querySelector(".light-effect"); 
-    light.style.left= e.clientX + "px"; light.style.top= (e.clientY + window.scrollY) + "px";});</script>
-
- <nav id="nav">
+  <!-- NAV -->
+  <nav id="nav">
     <input type="checkbox" id="menu-toggle">
     <label for="menu-toggle" class="menu-icon">&#9776</label>
-
-    <ul class="nav-group">
     <div class="nav-group">
       <li><a href="home.html">Inicio</a></li>
       <li><a href="about.html">Rosa</a></li>
@@ -32,44 +20,213 @@
       <li><a href="shop.html">Shop</a></li>
       <li><a href="login.html">Registrarse</a></li>
     </div>
-    </ul>
   </nav>
 
-  <h1>Discografía</h1>
-    <h2>Albumes</h2>
-    <h2>Ep2</h2>
-    <h2>sencillos</h2>
+  <!-- ---------------------------- -->
+  <!-- DISCROGRAFÍA PRINCIPAL (FLIP + FULLSCREEN) -->
+  <!-- ---------------------------- -->
 
+  <section id="discografia">
+      <h2>Discografía</h2>
 
+      <div class="grid">
 
+          <!-- LOS ÁNGELES -->
+          <a href="#losangeles" class="flip-card" id="card1">
+              <div class="flip-inner">
+                  <div class="flip-front card">
+                      <img src="https://via.placeholder.com/350x350" alt="Los Ángeles">
+                      <h3>Los Ángeles</h3>
+                  </div>
+                  <div class="flip-back">
+                      <h3>Los Ángeles</h3>
+                      <p>Haz clic para ver más información.</p>
+                  </div>
+              </div>
+          </a>
 
+          <!-- EL MAL QUERER -->
+          <a href="#elmalquerer" class="flip-card" id="card2">
+              <div class="flip-inner">
+                  <div class="flip-front card">
+                      <img src="https://via.placeholder.com/350x350" alt="El Mal Querer">
+                      <h3>El Mal Querer</h3>
+                  </div>
+                  <div class="flip-back">
+                      <h3>El Mal Querer</h3>
+                      <p>Haz clic para ver más información.</p>
+                  </div>
+              </div>
+          </a>
 
+          <!-- MOTOMAMI -->
+          <a href="#motomami" class="flip-card" id="card3">
+              <div class="flip-inner">
+                  <div class="flip-front card">
+                      <img src="https://via.placeholder.com/350x350" alt="Motomami">
+                      <h3>MOTOMAMI</h3>
+                  </div>
+                  <div class="flip-back">
+                      <h3>MOTOMAMI</h3>
+                      <p>Haz clic para ver más información.</p>
+                  </div>
+              </div>
+          </a>
 
+          <!-- LUX ÆTERNA -->
+          <a href="#lux" class="flip-card" id="card4">
+              <div class="flip-inner">
+                  <div class="flip-front card">
+                      <img src="https://via.placeholder.com/350x350" alt="Lux">
+                      <h3>LUX ÆTERNA</h3>
+                  </div>
+                  <div class="flip-back">
+                      <h3>LUX ÆTERNA</h3>
+                      <p>Haz clic para ver más información.</p>
+                  </div>
+              </div>
+          </a>
 
+      </div>
+  </section>
 
+  <!-- ---------------------------- -->
+  <!-- FULLSCREEN INFO (TARGET) -->
+  <!-- ---------------------------- -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <footer>
-     <p>© 2025 Rosalía | Todos los derechos reservados | Sony Music Entertainment</p>
-      <a href="mail contacto">contacto@rosalia.blog.com.ar</a>
-  <div class="iconos redes">
-    <a href="https://www.instagram.com/rosalia.vt/?hl=es">Instagram</a>
-    <a href="https://www.rosalia.com/">Web Oficial</a>
-
+  <div id="losangeles" class="fullscreen">
+      <a href="#" class="close-full" aria-label="Cerrar">✕</a>
+      <div class="fullscreen-content">
+          <img src="https://via.placeholder.com/600x600" alt="Los Ángeles portada">
+          <h2>Los Ángeles (2017)</h2>
+          <p>Primer álbum en colaboración con Raül Refree.</p>
+      </div>
   </div>
-   </footer>
+
+  <div id="elmalquerer" class="fullscreen">
+      <a href="#" class="close-full" aria-label="Cerrar">✕</a>
+      <div class="fullscreen-content">
+          <img src="https://via.placeholder.com/600x600" alt="El Mal Querer portada">
+          <h2>El Mal Querer (2018)</h2>
+          <p>Álbum conceptual basado en el romance medieval "Flamenca".</p>
+      </div>
+  </div>
+
+  <div id="motomami" class="fullscreen">
+      <a href="#" class="close-full" aria-label="Cerrar">✕</a>
+      <div class="fullscreen-content">
+          <img src="https://via.placeholder.com/600x600" alt="Motomami portada">
+          <h2>MOTOMAMI (2022)</h2>
+          <p>Álbum experimental aclamado globalmente.</p>
+      </div>
+  </div>
+
+  <div id="lux" class="fullscreen">
+      <a href="#" class="close-full" aria-label="Cerrar">✕</a>
+      <div class="fullscreen-content">
+          <img src="https://via.placeholder.com/600x600" alt="Lux portada">
+          <h2>LUX ÆTERNA (2024)</h2>
+          <p>Exploración sonora más minimalista y espiritual.</p>
+      </div>
+  </div>
+
+  <!-- ---------------------------- -->
+  <!-- OTROS ALBUMES -->
+  <!-- ---------------------------- -->
+
+  <section id="albumes">
+      <h2>Álbumes</h2>
+      <div class="grid">
+          <div class="card">
+              <img src="https://via.placeholder.com/350x350" alt="Álbum demo">
+              <h3>Álbum Demo</h3>
+          </div>
+
+          <div class="card">
+              <img src="https://via.placeholder.com/350x350" alt="Otro proyecto">
+              <h3>Otro Proyecto</h3>
+          </div>
+      </div>
+  </section>
+
+  <!-- ---------------------------- -->
+  <!-- EP2 -->
+  <!-- ---------------------------- -->
+
+  <section id="ep2">
+      <h2>EP2</h2>
+      <div class="grid">
+          <div class="card">
+              <img src="https://via.placeholder.com/350x350" alt="EP demo">
+              <h3>EP Demo</h3>
+          </div>
+      </div>
+  </section>
+
+  <!-- ---------------------------- -->
+  <!-- SENCILLOS -->
+  <!-- ---------------------------- -->
+
+  <section id="sencillos">
+      <h2>Sencillos</h2>
+      <div class="grid">
+          <div class="card">
+              <img src="https://via.placeholder.com/350x350" alt="Single uno">
+              <h3>Single Uno</h3>
+          </div>
+
+          <div class="card">
+              <img src="https://via.placeholder.com/350x350" alt="Single dos">
+              <h3>Single Dos</h3>
+          </div>
+
+          <div class="card">
+              <img src="https://via.placeholder.com/350x350" alt="Single uno">
+              <h3>Single Uno</h3>
+          </div>
+
+          <div class="card">
+              <img src="https://via.placeholder.com/350x350" alt="Single dos">
+              <h3>Single Dos</h3>
+          </div>
+
+          <div class="card">
+              <img src="https://via.placeholder.com/350x350" alt="Single uno">
+              <h3>Single Uno</h3>
+          </div>
+
+          <div class="card">
+              <img src="https://via.placeholder.com/350x350" alt="Single dos">
+              <h3>Single Dos</h3>
+          </div>
+
+          <div class="card">
+              <img src="https://via.placeholder.com/350x350" alt="Single uno">
+              <h3>Single Uno</h3>
+          </div>
+
+          <div class="card">
+              <img src="https://via.placeholder.com/350x350" alt="Single dos">
+              <h3>Single Dos</h3>
+          </div>
+
+          <div class="card">
+              <img src="https://via.placeholder.com/350x350" alt="Single dos">
+              <h3>Single Dos</h3>
+          </div>
+      </div>
+      
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+      <p>© 2025 Rosalía | Todos los derechos reservados | Sony Music Entertainment</p>
+      <a href="mailto:contacto@rosalia.blog.com.ar">contacto@rosalia.blog.com.ar</a>
+      <div class="iconos-redes">
+          <a href="https://www.instagram.com/rosalia.vt/?hl=es">Instagram</a> |
+          <a href="https://www.rosalia.com/">Web Oficial</a>
+      </div>
+  </footer>
+
 </body>
 </html>

@@ -21,6 +21,42 @@
     <script>document.addEventListener("mousemove", (e)=>{const light= document.querySelector(".light-effect"); 
     light.style.left= e.clientX + "px"; light.style.top= (e.clientY + window.scrollY) + "px";});</script>
 
+<script>
+  (function(){
+    const galleryImgs = document.querySelectorAll('#gallery img');
+    const overlay = document.createElement('div');
+    overlay.className = 'lightbox-overlay';
+    overlay.innerHTML = '<div class="lightbox-content"><img src="" alt=""></div>';
+    document.body.appendChild(overlay);
+    
+    const overlayImg = overlay.querySelector('img');
+    function openLightbox(src, alt){
+      overlayImg.src = src;
+      overlayImg.alt = alt || '';
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox(){
+      overlay.classList.remove('active');
+      overlayImg.src = '';
+      document.body.style.overflow = '';
+    }
+    galleryImgs.forEach(img => {
+      img.addEventListener('click', () => {
+        const full = img.dataset.full || img.src;
+        openLightbox(full, img.alt);
+      });
+    });
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeLightbox();
+    });
+    overlayImg.addEventListener('click', (e) => e.stopPropagation());
+  })();
+</script>
+
  <nav id="nav">
     <input type="checkbox" id="menu-toggle">
     <label for="menu-toggle" class="menu-icon">&#9776</label>
@@ -102,49 +138,6 @@
   <img src="rosalia-lux-1-1.jpg" alt="lux full">
  </div>
  </section>
- 
-<script>
-  (function(){
-    const galleryImgs = document.querySelectorAll('#gallery img');
-    const overlay = document.createElement('div');
-    overlay.className = 'lightbox-overlay';
-    overlay.innerHTML = '<div class="lightbox-content"><img src="" alt=""></div>';
-    document.body.appendChild(overlay);
-
-    const overlayImg = overlay.querySelector('img');
-
-    function openLightbox(src, alt){
-      overlayImg.src = src;
-      overlayImg.alt = alt || '';
-      overlay.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeLightbox(){
-      overlay.classList.remove('active');
-      overlayImg.src = '';
-      document.body.style.overflow = '';
-    }
-
-    galleryImgs.forEach(img => {
-      img.addEventListener('click', () => {
-        const full = img.dataset.full || img.src;
-        openLightbox(full, img.alt);
-      });
-    });
-
-    // cerrar al clickar el fondo (overlay) y con Esc
-    overlay.addEventListener('click', (e) => {
-      if (e.target === overlay) closeLightbox();
-    });
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && overlay.classList.contains('active')) closeLightbox();
-    });
-
-    // evitar que click en la imagen cierre el lightbox
-    overlayImg.addEventListener('click', (e) => e.stopPropagation());
-  })();
-</script>
-
 
 
   <footer>

@@ -1,87 +1,86 @@
-body{
-   background-image: url("fondo-de-pared-de-color-con-textura.jpg");    
-   background-size: cover;
-   font-family: "times-new-roman", sans-serif;
-   font-weight: 400;
-   font-style: normal;
-   margin: 0;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   gap: 24px;
-   min-height: 100vh;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/*header*/
-header {
-      background: #ffdb92;
-      padding: 30px;
-      font-family: "times-new-roman", sans-serif;
-      font-weight: 400;
-      font-style: normal;
-      text-align: center;
-    }
-nav{
-    display: block;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: #383647;
-    color: #7cbdbd;
-    padding: 15px 25px;
-    position: sticky;
-    top: 0%;
-    z-index: 10;
-    width: 100%;
-    box-sizing: border-box;
+
+body{
+  background-image: url("fondo-de-pared-de-color-con-textura.jpg");    
+  background-size: cover;
+  background-position: center;
+  font-family: "Times New Roman", serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  gap: 24px;
 }
+
+
+header{
+  background: #ffdb92;
+  padding: 30px;
+  text-align: center;
+}
+
+h1{
+  font-size: 50px;
+  color: #0b4e56;
+  font-family: "Quintessential", serif;
+}
+
+
+nav{
+  display: flex;
+  align-items: center;
+  background-color: #383647;
+  color: #7cbdbd;
+  padding: 15px 25px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
 .nav-group{
   list-style: none;
   display: flex;
   gap: 25px;
+  margin-left: auto;
 }
-.nav-group li a {
+
+.nav-group li a{
   text-decoration: none;
   color: #a2cedd;
   font-weight: bold;
-  transition: color 0.3s;
+  transition: 0.3s;
 }
-.nav-group li a:hover {
-    color: #ffdb92;
+
+.nav-group li a:hover{
+  color: #ffdb92;
 }
-.menu-icon {
+
+
+.menu-icon{
   display: none;
-  font-size: 1.8em;
+  font-size: 1.8rem;
   color: #6fa9e8;
   cursor: pointer;
-  margin-right: auto;
 }
-#menu-toggle {
+
+#menu-toggle{
   display: none;
 }
-ul{
-    margin: 0;
-    padding: 0;
-}
 
-h1{
-    font-size: 50px;
-    color: #0b4e56;
-    margin: 0;
-  font-family: "Quintessential", serif;
-  font-weight: 400;
-  font-style: normal;
-    text-align: center;
-}
 
-/*formulario*/
 .container{
   width: 100%;
   max-width: 820px;
   padding: 20px;
-  box-sizing: border-box;
-  display: block;
-  margin: 0 auto;
+  margin-bottom: 80px;
 }
+
 
 .contlogin{
   background: rgba(255,255,255,0.85);
@@ -93,8 +92,7 @@ h1{
 .contlogin form{
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  width: 100%;
+  gap: 12px;
 }
 
 .contlogin label{
@@ -109,7 +107,6 @@ h1{
 }
 
 .contlogin button{
-  margin-top: 8px;
   padding: 10px 14px;
   background: #383647;
   color: #ffdb92;
@@ -119,80 +116,102 @@ h1{
   font-weight: 700;
 }
 
-/*luz*/
-.light-effect {
+
+.light-effect{
   position: absolute;
-  width: 300px; 
-  height: 300px; 
-  border-radius:50%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 40%);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 40%);
   filter: blur(50px);
-  will-change: filter;
-  pointer-events: none; 
-  transform: translate(-50%, -50%); 
-  transition: transform 0.1s ease-out;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
   mix-blend-mode: screen;
-   z-index: 999;
+  transition: transform 0.1s ease-out;
+  z-index: 999;
 }
 
 /*footer*/
-footer {
-    background-color: #383647;
-    color: white;
-    text-align: center;
-    display: block;
-    padding: 15px 1px;
-    position: static;
-    bottom: 0;
-    width: 100%;
-    }
+footer{
+  background-color: #383647;
+  color: white;
+  text-align: center;
+  padding: 15px 1px;
+  width: 100%;
+  margin-top: auto;
+}
 
-footer a {
-    color: #ffdb92;
-    text-decoration: none;
-    margin: 0 10px;
-    transition: color 0.3s;
-    }
+footer a{
+  color: #ffdb92;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: 0.3s;
+}
 
-footer a:hover {
-    color: #57b3e8;
-    }
+footer a:hover{
+  color: #57b3e8;
+}
+
 .iconos-redes{
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 /*adaptable*/
+@media (max-width: 900px){
+  h1{ font-size: 2.4rem; }
+}
 
-@media (max-width: 768px) {
-  /* mostrar icono de menú y ocultar enlaces hasta hacer toggle */
-  .menu-icon { display: block; }
-  .nav-group {
+@media (max-width: 768px){
+
+  .menu-icon{
+    display: block;
+    margin-right: auto;
+  }
+
+  .nav-group{
     display: none;
     flex-direction: column;
-    gap: 12px;
     background: rgba(0,0,0,0.85);
     position: absolute;
-    top: 60px;
-    left: 16px;
-    padding: 12px;
+    top: 65px;
+    left: 10px;
+    padding: 15px;
     border-radius: 8px;
+    width: 200px;
+    gap: 15px;
     z-index: 20;
   }
-  /* estructura: input#menu-toggle + label.menu-icon + .nav-group */
-  #menu-toggle:checked + .menu-icon + .nav-group {
+
+  #menu-toggle:checked + .menu-icon + .nav-group{
     display: flex;
   }
 
-  /* ajustes de contenedor y formulario */
-  .container { padding: 12px; max-width: 95%; }
-  h1 { font-size: 2rem; margin-top: 8px; }
-  .formulario-compra { padding: 14px; border-radius: 8px; }
-  .formulario-compra input,
-  .formulario-compra button { font-size: 1rem; padding: 12px; }
+  .container{
+    max-width: 95%;
+    padding: 12px;
+  }
 
-  /* luz más pequeña en móviles */
-  .light-effect { width: 200px; height: 200px; filter: blur(40px); }
+  h1{
+    font-size: 1.9rem;
+  }
 
-  /* si usas body como flex para footer pegado abajo, mantiene el comportamiento */
-  /* (no obligatorio) */
+  .contlogin{
+    padding: 14px;
+  }
+
+  .contlogin input,
+  .contlogin button{
+    font-size: 1rem;
+  }
+
+  .light-effect{
+    width: 180px;
+    height: 180px;
+    filter: blur(40px);
+  }
+}
+
+@media (max-width: 480px){
+  h1{ font-size: 1.6rem; }
+  nav{ padding: 12px 18px; }
 }

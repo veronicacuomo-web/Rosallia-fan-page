@@ -13,10 +13,10 @@
    z-index: 999;
 }
 .main {
-  flex: 1 0 auto; /* ocupa el espacio disponible entre header y footer */
+  flex: 1 0 auto; 
   display: flex;
-  align-items: center; /* centra verticalmente */
-  justify-content: center; /* centra horizontalmente */
+  align-items: center; 
+  justify-content: center; 
   width: 100%;
   box-sizing: border-box;
   padding: 24px 0;
@@ -34,7 +34,7 @@ body{
   gap: 24px;
   min-height: 100vh;
 }
-/*header*/
+
 header {
       background: #ffdb92;
       padding: 30px;
@@ -80,7 +80,6 @@ nav{
   display: none;
 }
 
-
 /*footer*/
 footer {
     background-color: #383647;
@@ -88,7 +87,7 @@ footer {
     text-align: center;
     display: block;
     padding: 15px 1px;
-    position: static;
+    position: absolute;
     bottom: 0;
     width: 100%;
     }
@@ -107,7 +106,6 @@ footer a:hover {
     margin-top: 10px;
 }
 
-/* Contenedor principal para centrar y ordenar verticalmente */
 .container{
   width: 100%;
   max-width: 820px;
@@ -161,7 +159,6 @@ h1{
 /*adaptable*/
 
 @media (max-width: 768px) {
-  /* mostrar icono de menú y ocultar enlaces hasta hacer toggle */
   .menu-icon { display: block; }
   .nav-group {
     display: none;
@@ -180,7 +177,6 @@ h1{
     display: flex;
   }
 
-  
   .container { padding: 12px; max-width: 95%; }
   h1 { font-size: 2rem; margin-top: 8px; }
   .formulario-compra { padding: 14px; border-radius: 8px; }
@@ -189,6 +185,4 @@ h1{
 
  
   .light-effect { width: 200px; height: 200px; filter: blur(40px); }
-
-
 }

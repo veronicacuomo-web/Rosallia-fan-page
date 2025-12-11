@@ -87,13 +87,12 @@ img{
 }
 #gallery{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* columnas responsivas */
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); 
     gap: 12px;
     padding: 20px;
     align-items: stretch;
 }
 
-/* asegurar que todas las imágenes ocupen su celda y tengan el mismo tamaño */
 #gallery img,
 .gallery img {
     width: 100%;
@@ -127,8 +126,8 @@ img{
 .lightbox-content img {
   width: auto;
   height: auto;
-  max-width: 92vw;   /* ocupa gran parte del ancho del viewport */
-  max-height: 92vh;  /* ocupa gran parte de la altura del viewport */
+  max-width: 92vw;  
+  max-height: 92vh;  
   object-fit: contain;
   border-radius: 8px;
   box-shadow: 0 16px 50px rgba(0,0,0,0.7);
@@ -139,7 +138,7 @@ img{
   user-select: none;
 }
 .lightbox-content img.opened {
-  transform: scale(1.02); /* pequeño zoom extra al abrir */
+  transform: scale(1.02); 
 }
 
 .lightbox-close:hover { background: rgba(255,255,255,1); }
@@ -218,7 +217,7 @@ footer a:hover {
     padding: 12px 16px;
     font-size: 15px;
   }
-  /* mostrar icono de menú y ocultar enlaces hasta hacer toggle */
+
   .menu-icon { display: block; }
   .nav-group {
     display: none;
@@ -232,21 +231,18 @@ footer a:hover {
     border-radius: 8px;
     z-index: 20;
   }
-  /* estructura: input#menu-toggle + label.menu-icon + .nav-group */
+
   #menu-toggle:checked + .menu-icon + .nav-group {
     display: flex;
   }
 
-  /* ajustes de contenedor y formulario */
   .container { padding: 12px; max-width: 95%; }
   h1 { font-size: 2rem; margin-top: 8px; }
   .formulario-compra { padding: 14px; border-radius: 8px; }
   .formulario-compra input,
   .formulario-compra button { font-size: 1rem; padding: 12px; }
 
-  /* luz más pequeña en móviles */
+
   .light-effect { width: 200px; height: 200px; filter: blur(40px); }
 
-  /* si usas body como flex para footer pegado abajo, mantiene el comportamiento */
-  /* (no obligatorio) */
 }
